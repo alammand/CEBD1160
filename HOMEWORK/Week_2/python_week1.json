@@ -1,0 +1,300 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1 - Integer \n",
+    "#3.14 ",
+    "- float\n",
+    "#\"Big Data!\" ",
+    "- String\n",
+    "#'Big Data!' ",
+    "- String\n",
+    "#True ",
+    "- Boolean\n",
+    "#False ",
+    "- Boolean\n",
+    "#[1,2,\"intruder\",3] ",
+    "- List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "FIZZBUZZ\n",
+      "1\n",
+      "2\n",
+      "fizz\n",
+      "4\n",
+      "buzz\n",
+      "fizz\n",
+      "7\n",
+      "8\n",
+      "fizz\n",
+      "buzz\n",
+      "11\n",
+      "fizz\n",
+      "13\n",
+      "14\n",
+      "FIZZBUZZ\n",
+      "16\n",
+      "17\n",
+      "fizz\n",
+      "19\n",
+      "buzz\n",
+      "fizz\n",
+      "22\n",
+      "23\n",
+      "fizz\n",
+      "buzz\n",
+      "26\n",
+      "fizz\n",
+      "28\n",
+      "29\n",
+      "FIZZBUZZ\n",
+      "31\n",
+      "32\n",
+      "fizz\n",
+      "34\n",
+      "buzz\n",
+      "fizz\n",
+      "37\n",
+      "38\n",
+      "fizz\n",
+      "buzz\n",
+      "41\n",
+      "fizz\n",
+      "43\n",
+      "44\n",
+      "FIZZBUZZ\n",
+      "46\n",
+      "47\n",
+      "fizz\n",
+      "49\n",
+      "buzz\n",
+      "fizz\n",
+      "52\n",
+      "53\n",
+      "fizz\n",
+      "buzz\n",
+      "56\n",
+      "fizz\n",
+      "58\n",
+      "59\n",
+      "FIZZBUZZ\n",
+      "61\n",
+      "62\n",
+      "fizz\n",
+      "64\n",
+      "buzz\n",
+      "fizz\n",
+      "67\n",
+      "68\n",
+      "fizz\n",
+      "buzz\n",
+      "71\n",
+      "fizz\n",
+      "73\n",
+      "74\n",
+      "FIZZBUZZ\n",
+      "76\n",
+      "77\n",
+      "fizz\n",
+      "79\n",
+      "buzz\n",
+      "fizz\n",
+      "82\n",
+      "83\n",
+      "fizz\n",
+      "buzz\n",
+      "86\n",
+      "fizz\n",
+      "88\n",
+      "89\n",
+      "FIZZBUZZ\n",
+      "91\n",
+      "92\n",
+      "fizz\n",
+      "94\n",
+      "buzz\n",
+      "fizz\n",
+      "97\n",
+      "98\n",
+      "fizz\n",
+      "buzz\n"
+     ]
+    }
+   ],
+   "source": [
+    "for numb in range(0,101):\n",
+    "    if numb % 3 == 0 and not numb % 5 == 0:\n",
+    "        print (\"fizz\")\n",
+    "    elif numb % 5 == 0 and not numb % 3 == 0:\n",
+    "        print (\"buzz\")\n",
+    "    elif numb % 3 == 0 and numb % 5 == 0:\n",
+    "        print (\"FIZZBUZZ\")\n",
+    "    else:\n",
+    "        print (numb)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "234168\n"
+     ]
+    }
+   ],
+   "source": [
+    "total_sum = 0\n",
+    "for i in range(1001):\n",
+    "   if (i%3 == 0 or i%5 == 0):\n",
+    "       total_sum = total_sum + i\n",
+    "print (total_sum)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "gksfrgks -  cmptr scnc prtl fr gks\n"
+     ]
+    }
+   ],
+   "source": [
+    "def rem_vowels(string):\n",
+    "   vowels = ('a', 'e', 'i', 'o', 'u')\n",
+    "   for x in string.lower():\n",
+    "       if x in vowels:\n",
+    "           string = string.replace(x, \"\")\n",
+    "   # Print string without vowels\n",
+    "   print(string)\n",
+    "# Driver program\n",
+    "string = \"GeeksforGeeks - A Computer Science Portal for Geeks\"\n",
+    "string = string.lower()\n",
+    "rem_vowels(string)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Count of all characters in name is :{'R': 1, 'a': 4, 'j': 1, 'l': 1, 'm': 1, ' ': 2, 'S': 1, 'i': 1, 'n': 2, 'g': 1, 'h': 1, 'M': 1, 'd': 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "name = \"Rajalam Singh Mand\"\n",
+    "\n",
+    "character_freq = {} \n",
+    "  \n",
+    "for x in name: \n",
+    "    if x in character_freq: \n",
+    "        character_freq[x] += 1\n",
+    "    else: \n",
+    "        character_freq[x] = 1\n",
+    "    \n",
+    "print(\"Count of all characters in name is :\"+  str(character_freq))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Nory': 1, 'was': 4, 'a': 4, 'Catholic': 2, 'because': 2, 'her': 2, 'mother': 2, 'Catholic,': 1, 'and': 1, 'Nory’s': 1, 'father': 1, 'Catholic.': 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def word_count(str):\n",
+    "   counts = dict()\n",
+    "   words = str.split()\n",
+    "   for w in words:\n",
+    "       if w in counts:\n",
+    "           counts[w] += 1\n",
+    "       else:\n",
+    "           counts[w] = 1\n",
+    "   return counts\n",
+    "print( word_count('Nory was a Catholic because her mother was a Catholic, and Nory’s mother was a Catholic because her father was a Catholic.'))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Input comma separated sequence of wordshello,aisha,world,lumina\n",
+      "aisha,hello,lumina,world\n"
+     ]
+    }
+   ],
+   "source": [
+    "items = input(\"Input comma separated sequence of words\")\n",
+    "words = [word for word in items.split(\",\")]\n",
+    "print(\",\".join(sorted(list(set(words)))))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

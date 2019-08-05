@@ -1,0 +1,171 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[10, 11, 12, 13, 14, 15, 16]\n"
+     ]
+    }
+   ],
+   "source": [
+    "first_list = [10, 11, 10, 11, 12, 13, 14, 14, 15, 16]\n",
+    "def kill_duplicates(a):\n",
+    " print(list(set(a)))\n",
+    "kill_duplicates(first_list)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n",
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "def find(ordered_list, element_to_find):\n",
+    "  for element in ordered_list:\n",
+    "    if element == element_to_find:\n",
+    "      return True\n",
+    "  return False\n",
+    "  \n",
+    "if __name__==\"__main__\":\n",
+    "  l = [100, 200, 300, 400, 600]\n",
+    "  print(find(l, 150)) # prints False\n",
+    "  print(find(l, 200)) # prints True\n",
+    "  print(find(l, 450)) # prints False\n",
+    "  print(find(l, 600)) # prints True\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Even numbers from the given list are:  [4, 16, 36, 64, 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n",
+    "even_numb =[numb for numb in a if numb%2 == 0]\n",
+    "print(\"Even numbers from the given list are: \",even_numb)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    " \n",
+    "numb_range = (0, 200)\n",
+    " \n",
+    "print(\"Guess my target number that is between %i and %i (inclusive).\\n\"\n",
+    "      % numb_range)\n",
+    "target = random.randint(*numb_range)\n",
+    "answer, i = None, 0\n",
+    "while answer != target:\n",
+    "    i += 1\n",
+    "    txt = input(\"Your guess(%i): \" % i)\n",
+    "    try:\n",
+    "        answer = int(txt)\n",
+    "    except ValueError:\n",
+    "        print(\"  I don't understand your input of '%s' ?\" % txt)\n",
+    "        continue\n",
+    "    if answer < numb_range[0] or answer > numb_range[1]:\n",
+    "        print(\"  Out of range!\")\n",
+    "        continue\n",
+    "    if answer == target:\n",
+    "        print(\"  Bingo!!\")\n",
+    "        break\n",
+    "    if answer < target: print(\" way lower.\")\n",
+    "    if answer > target: print(\" way upper.\")\n",
+    " \n",
+    "print(\"\\nThanks for playing.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "\n",
+    "lowBound = 0\n",
+    "highBound = 200\n",
+    "randomNumber = random.randint(lowBound,highBound)\n",
+    "print (\"Please type: 1 for my try is too high\")\n",
+    "print (\"             2 for my try is too low\")\n",
+    "print (\"             3 I guessed your number\")\n",
+    "print (\"Is number in your mind is: \", randomNumber, \" ?\")\n",
+    "response = input()\n",
+    "\n",
+    "while response != \"3\":\n",
+    "    if response == \"2\":\n",
+    "        lowBound = randomNumber    \n",
+    "        randomNumber = random.randint (lowBound, highBound)\n",
+    "        print (\"Is it \", randomNumber, \" ?\")\n",
+    "        response = input()\n",
+    "\n",
+    "    elif response == \"1\":\n",
+    "        highBound = randomNumber\n",
+    "        randomNumber = random.randint (lowBound, highBound)\n",
+    "        print (\"Is it \", randomNumber, \" ?\")\n",
+    "        response = input()\n",
+    "\n",
+    "    if response == \"3\":\n",
+    "        print (\"Woohooo, i guessed the number in your mind'\")\n",
+    "        break\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
